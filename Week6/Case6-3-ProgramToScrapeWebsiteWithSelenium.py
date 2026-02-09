@@ -11,7 +11,7 @@ driver = webdriver.Chrome(service=cService)
 driver.get(url)
 
 qouestList=[]
-qoutesDiv = driver.find_elements(By.XPATH, "//div[contains(@class, 'text-center mb-8')]")
+qoutesDiv = driver.find_elements(By.XPATH, "//div[contains(@class, 'octopus-search-result-card_style_apbSearchResultItem__2-mx4')]")
 for p in range(len(qoutesDiv) -1):
     quote = {}
     innerImg = qoutesDiv[p+1].find_element(By.TAG_NAME, "img")
